@@ -1,6 +1,15 @@
-""" Projeto Para a seleção de estágio da Target Sistemas
+"""
+Projeto Para a seleção de estágio da Target Sistemas
 Nome: Paulo Mauricio Pereira Patricio
-Estudante: Análise e Desenvolvimento de Sistemas"""
+Estudante: Análise e Desenvolvimento de Sistemas
+
+Atualize o número da versão aqui
+Versão: 1.0.1
+
+Descrição da Versão:
+- Melhorada a legibilidade da saída com inclusão de "\n".
+- Adicionado "input()" para pausar a tela e permitir melhor leitura dos resultados.
+"""
 
 
 class Fibonacci:
@@ -34,14 +43,15 @@ class Fibonacci:
 
 # Função para garantir que o usuário insira um número inteiro
 def entrada_valida():
+    print("*" * 3 + " Verificador de Fibonacci " + 3 * "*")
     while True:
         try:
             # Solicita que o usuário insira um número inteiro
-            numero = int(input("Informe um número inteiro para verificar se pertence à sequência de Fibonacci: "))
+            numero = int(input("\nInforme um número inteiro para verificar se pertence à sequência de Fibonacci: "))
             return numero
         except ValueError:
             # Trata o erro de valor caso o usuário não insira um número inteiro
-            print("Entrada inválida. Por favor, insira um número inteiro.")
+            print("\nEntrada inválida. Por favor, insira um número inteiro.")
 
 
 # Função principal para rodar o programa
@@ -54,9 +64,10 @@ def main():
 
     # Verifica se o número pertence à sequência de Fibonacci
     if fibonacci.pertence_a_fibonacci(numero):
-        print(f"O número {numero} pertence à sequência de Fibonacci.")
+        print(f"\nO número {numero} pertence à sequência de Fibonacci.")
     else:
-        print(f"O número {numero} NÃO pertence à sequência de Fibonacci.")
+        print(f"\nO número {numero} NÃO pertence à sequência de Fibonacci.")
+    input()
 
 
 # Executa o programa principal
